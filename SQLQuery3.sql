@@ -1,0 +1,7 @@
+USE [APT1050A]
+GO
+SELECT * FROM dbo.tCust
+
+GO
+
+
