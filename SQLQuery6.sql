@@ -34,5 +34,17 @@ GROUP BY ProductID
 SELECT ProductID, SUM(OrderQty) AS TotalQty
 FROM tOrderDetail
 GROUP BY ProductID
-HAVING SUM(OrderQty) > 3
+HAVING SUM(OrderQty) > 6
 ORDER BY ProductID asc
+
+--using where and having
+-- Where Clause
+SELECT COUNT(SalesOrderID)
+FROM tOrderDetail
+WHERE UnitPrice > 50
+
+-- Having Clause
+SELECT SalesOrderID, SUM(UnitPrice*OrderQty) AS TotalPrice
+FROM tOrderDetail
+GROUP BY SalesOrderID
+Having SalesOrderID > 09736
