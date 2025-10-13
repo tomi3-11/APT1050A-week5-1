@@ -59,3 +59,12 @@ HAVING SUM(OrderQty) > 5
 --ORDER BY ProductID
 --HAVING TotalQty > 5
 
+-- Trying Grouping by productName
+SELECT ProductName, SUM(OrderQty) AS TotalQty
+From tOrderDetail
+INNER JOIN tProduct
+ON tOrderDetail.ProductID = tProduct.ProductID
+GROUP BY ProductName
+HAVING SUM(OrderQty) > 5
+--ORDER BY ProductID
+--HAVING TotalQty > 5
