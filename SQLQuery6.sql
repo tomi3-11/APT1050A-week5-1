@@ -24,3 +24,15 @@ SELECT ProductID, AVG(OrderQty) As AvgQty
 FROM tOrderDetail
 GROUP BY ProductID
 ORDER BY ProductID asc
+
+SELECT ProductID, SUM(OrderQty) As TotalQty
+FROM tOrderDetail
+WHERE ProductID = 413
+GROUP BY ProductID
+
+-- HAVING 
+SELECT ProductID, SUM(OrderQty) AS TotalQty
+FROM tOrderDetail
+GROUP BY ProductID
+HAVING SUM(OrderQty) > 3
+ORDER BY ProductID asc
