@@ -48,3 +48,14 @@ SELECT SalesOrderID, SUM(UnitPrice*OrderQty) AS TotalPrice
 FROM tOrderDetail
 GROUP BY SalesOrderID
 Having SalesOrderID > 09736
+
+-- Design a query showing list of productIDs where sum of OrderQty is greater than 150.
+SELECT tOrderDetail.ProductID, SUM(OrderQty) AS TotalQty
+From tOrderDetail
+INNER JOIN tProduct
+ON tOrderDetail.ProductID = tProduct.ProductID
+GROUP BY tOrderDetail.ProductID
+HAVING SUM(OrderQty) > 5
+--ORDER BY ProductID
+--HAVING TotalQty > 5
+
