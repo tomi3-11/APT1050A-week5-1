@@ -123,4 +123,5 @@ CREATE VIEW vtEmployee2 AS
 SELECT * FROM tEmployee2
 WHERE DeleteFlag = 0
 
+-- displaying the view
 SELECT * FROM vtEmployee2
