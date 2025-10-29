@@ -81,3 +81,33 @@ SET PostalCode = '00100'
 WHERE city = 'LONDON'
 
 */
+
+-- DELETE
+
+DELETE FROM tEmployee3
+/*
+Deletes all records in the table
+Notice no fields mentioned
+*/
+
+DELETE FROM tEmployee2
+WHERE FirstName = 'Tomi'
+
+/*Deletes a particular record*/
+
+-- Virtual DELETE
+
+/*
+Database admin avoid deletes by using virtual deletes
+Deleting from a view
+
+*/
+
+-- Virtual Delete- DeleteFlag
+
+-- To add a field to a table 
+ALTER TABLE tEmployee2
+ADD DeleteFlag bit;
+
+-- Update Delete Flag
+
