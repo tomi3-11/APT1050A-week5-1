@@ -125,3 +125,21 @@ WHERE DeleteFlag = 0
 
 -- displaying the view
 SELECT * FROM vtEmployee2
+
+
+/*
+ARCHIVING
+if tables are too large
+- Archive "deleted" records
+- copy "deleted" record
+
+
+*/
+
+
+-- DELETES a table
+DROP TABLE tEmployee3
+
+-- Deleting  a column
+--ALTER TABLE table_name
+--DROP COLUMN column_name
