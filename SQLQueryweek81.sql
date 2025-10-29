@@ -110,4 +110,17 @@ ALTER TABLE tEmployee2
 ADD DeleteFlag bit;
 
 -- Update Delete Flag
+UPDATE tEmployee2
+SET DeleteFlag = '0'
+WHERE Department = 'Finance'
 
+-- View table
+SELECT * FROM tEmployee2
+
+-- Virtual DELETE - VIEW
+
+CREATE VIEW vtEmployee2 AS
+SELECT * FROM tEmployee2
+WHERE DeleteFlag = 0
+
+SELECT * FROM vtEmployee2
