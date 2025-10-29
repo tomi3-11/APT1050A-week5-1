@@ -35,9 +35,49 @@ VALUES
 -- copying all record from one table to another
 INSERT INTO tEmployee2
 SELECT * FROM tEmployee
+-- SELECT statement provides data from the first table
 
 -- View all record in table 1
 SELECT * FROM tEmployee
 
 -- View all record in table 2
 SELECT * FROM tEmployee2
+
+-- SELECT INTO
+
+/*
+This create a duplicate table which is different from the rest
+NOTE: Generates an error if table already exist
+*/
+
+SELECT * INTO tEmployee3
+FROM tEmployee2
+
+SELECT * FROM tEmployee3
+
+
+-- UPDATE
+-- To Update one record.
+/*
+STRUCTURE:
+
+UPDATE tablename
+SET column1 = value1
+WHERE column2 = value1
+
+*/
+UPDATE tEmployee2
+SET FirstName = 'Tomi'
+WHERE EmployeeID = 1
+
+UPDATE tEmployee2
+SET EmployeeID = 1009
+WHERE FirstName = 'Tomi'
+/*
+MORE EXAMPLES:
+
+UPDATE tCustomer
+SET PostalCode = '00100'
+WHERE city = 'LONDON'
+
+*/
